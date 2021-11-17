@@ -18,7 +18,7 @@ RUN ARCH= && \
   esac && \
     echo "Etc/UTC" > /etc/localtime && \
 	apt-get update && \
-	apt-get install -y --no-install-recommends ca-certificates wget python && \
+	apt-get install -y --no-install-recommends ca-certificates wget python iproute2 && \
 	cd ~ && \
 	wget -q https://nodejs.org/download/release/v$NODE_VER/node-v$NODE_VER-linux-$ARCH.tar.gz && \
 	tar xf node-v$NODE_VER-linux-$ARCH.tar.gz && \
